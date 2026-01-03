@@ -1,4 +1,4 @@
-#include <chrono>
+mumuumumu#include <chrono>
 #include <functional>
 #include <memory>
 #include <string>
@@ -21,17 +21,11 @@ public:
   HelloNode()
   : Node("hello_world_node")
   {
-    timer_ = this->create_wall_timer(
-      1000ms,
-      std::bind(&HelloNode::timer_callback, this)
-    );
+    // TODO: Initialize the timer here
   }
 
 private:
-  void timer_callback()
-  {
-    RCLCPP_INFO(this->get_logger(), "Hello, World!");
-  }
+  // TODO: Define the timer_callback function here
 
   rclcpp::TimerBase::SharedPtr timer_;
 };
